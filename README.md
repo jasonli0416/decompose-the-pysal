@@ -2,4 +2,4 @@
 
 ## the picture showing below is luc anselin
 
-![luc anselin](decompose-the-pysal/pics/anselin.jpeg)
+![luc anselin](/pics/anselin.jpeg)
