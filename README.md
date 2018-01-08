@@ -48,9 +48,9 @@ the first part is init moduel
         if geoda_quads:
             quads = [1, 3, 2, 4]
         self.quads = quads
-        self.__quads()
-	#this is a private method
-        if permutations:# this function can generate the p-value
+        self.__quads()```
+	#this is a private method and if u want to read its source code please tab here[quads](- __quads)
+        ```if permutations:# this function can generate the p-value
             self.__crand()
             sim = np.transpose(self.rlisas)#使用了上面的方法，这个属性才能被调用,999行1519列的
             above = sim >= self.Is#这里也属于数组的广播，（999，1519）与（一个一维数组或者二维1*n或者列表才能进行广播，且这两个被比较的数组的列数需要相等），这一点一定要记住！！！！！！
@@ -66,4 +66,4 @@ the first part is init moduel
             self.z_sim = (self.Is - self.EI_sim) / self.seI_sim
             self.p_z_sim = 1 - stats.norm.cdf(np.abs(self.z_sim))
 ```
-
+- quads
