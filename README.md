@@ -17,7 +17,7 @@ PAY ATTENTION: I am also a rookie for python and pysal， if there are some mist
 
 the first part is init moduel
 
-'''
+```
  def __init__(self, x, y, w, transformation="r", permutations=PERMUTATIONS,
                  geoda_quads=False):
         x = np.asarray(x).flatten()#将数组折叠成一维的数组
@@ -64,4 +64,5 @@ the first part is init moduel
             self.VI_sim = self.seI_sim * self.seI_sim
             self.z_sim = (self.Is - self.EI_sim) / self.seI_sim
             self.p_z_sim = 1 - stats.norm.cdf(np.abs(self.z_sim))
-'''
+```
+
