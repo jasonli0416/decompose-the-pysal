@@ -52,7 +52,7 @@ PAY ATTENTION: I am also a rookie for python and pysal， if there are some mist
         self.quads = quads
         self.__quads()
 ```
-#this is a private method and if u want to read its source code please tab here*[quads](- __quads)
+#this is a private method and if u want to read its source code please tab here* [quads](- __quads)
 ```
 	if permutations:# this function can generate the p-value
             self.__crand()
