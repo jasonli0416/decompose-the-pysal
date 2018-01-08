@@ -20,18 +20,18 @@ the first part is init moduel
 ```
  def __init__(self, x, y, w, transformation="r", permutations=PERMUTATIONS,
                  geoda_quads=False):
-        x = np.asarray(x).flatten()#将数组折叠成一维的数组
+        x = np.asarray(x).flatten()# turn everything into one dimension
         y = np.asarray(y).flatten()
         self.y = y
         n = len(y)
         self.n = n
         self.n_1 = n - 1
-        zx = x - x.mean()#标准化a的方式
+        zx = x - x.mean()
         zy = y - y.mean()
         # setting for floating point noise
         orig_settings = np.seterr()
         np.seterr(all="ignore")
-        sx = x.std()#果然还是用的标准化值。
+        sx = x.std()#standardlized the x
         zx /= sx
         sy = y.std()
         zy /= sy
@@ -41,7 +41,7 @@ the first part is init moduel
         w.transform = transformation
         self.w = w
         self.permutations = permutations
-        self.den = (zx * zx).sum()#这个是个什么鬼？
+        self.den = (zx * zx).sum()
         self.Is = self.calc(self.w, self.zx, self.zy)
         self.geoda_quads = geoda_quads
         quads = [1, 2, 3, 4]
@@ -49,7 +49,8 @@ the first part is init moduel
             quads = [1, 3, 2, 4]
         self.quads = quads
         self.__quads()
-        if permutations:#这个if语句放在这里是啥意思？
+	#this is a private method
+        if permutations:# this function can generate the p-value
             self.__crand()
             sim = np.transpose(self.rlisas)#使用了上面的方法，这个属性才能被调用,999行1519列的
             above = sim >= self.Is#这里也属于数组的广播，（999，1519）与（一个一维数组或者二维1*n或者列表才能进行广播，且这两个被比较的数组的列数需要相等），这一点一定要记住！！！！！！
