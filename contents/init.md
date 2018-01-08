@@ -1,5 +1,7 @@
 #the first part is __init__ moduel
 
+
+
 ```
  def __init__(self, x, y, w, transformation="r", permutations=PERMUTATIONS,
                  geoda_quads=False):
@@ -18,7 +20,10 @@ turn everything into one dimension
         # setting for floating point noise
         orig_settings = np.seterr()
         np.seterr(all="ignore")
-        sx = x.std()#standardlized the x
+        sx = x.std()
+```
+standardlized the x
+```
         zx /= sx
         sy = y.std()
         zy /= sy
@@ -49,7 +54,7 @@ only after introduce the above methods, can the self.rlisa be used
 ```
             above = sim >= self.Is
 ```            
-here is the boradcast of the numpy ,            这里也属于数组的广播，（999，1519）与（一个一维数组或者二维1*n或者列表才能进行广播，且这两个被比较的数组的列数需要相等），这一点一定要记住！！！！！！(to be continued)
+here is the boradcast of the numpy ,  ~~这里也属于数组的广播，（999，1519）与（一个一维数组或者二维1*n或者列表才能进行广播，且这两个被比较的数组的列数需要相等），这一点一定要记住！！！！！！~~(to be continued)
 ```
             larger = above.sum(0)
 ```
