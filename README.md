@@ -51,9 +51,10 @@ PAY ATTENTION: I am also a rookie for python and pysal， if there are some mist
             quads = [1, 3, 2, 4]
         self.quads = quads
         self.__quads()
-	```
+```
 	#this is a private method and if u want to read its source code please tab here[quads](- __quads)
-        ```
+	
+      
 	if permutations:# this function can generate the p-value
             self.__crand()
             sim = np.transpose(self.rlisas)#使用了上面的方法，这个属性才能被调用,999行1519列的
@@ -69,5 +70,4 @@ PAY ATTENTION: I am also a rookie for python and pysal， if there are some mist
             self.VI_sim = self.seI_sim * self.seI_sim
             self.z_sim = (self.Is - self.EI_sim) / self.seI_sim
             self.p_z_sim = 1 - stats.norm.cdf(np.abs(self.z_sim))
-```
 - quads
