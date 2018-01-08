@@ -47,7 +47,7 @@ if permutations:# this function can generate the p-value
 ```
 only after introduce the above methods, can the self.rlisa be used
 ```
-            above = sim >= self.Is
+            above = sim >= self.Is 
 ```            
 here is the boradcast of the numpy , 
 这里也属于数组的广播，（999，1519）与（一个一维数组或者二维1*n或者列表才能进行广播，且这两个被比较的数组的列数需要相等），这一点一定要记住！！！！！！(to be continued)
